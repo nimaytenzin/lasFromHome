@@ -18,18 +18,21 @@ const registeredUsers = [
     alias: "tenzin",
     cid: "10302000402",
     password: "10302000402",
+    lemonHoneyDate: 0,
   },
   {
     name: "Sonam Eden",
     alias: "eden",
     cid: "10807000525",
     password: "10807000525",
+    lemonHoneyDate: 18,
   },
   {
     name: "Kinley Wangyel",
     alias: "kwangyel",
     cid: "10503000532",
     password: "10503000532",
+    lemonHoneyDate: 19,
   },
 ];
 
@@ -79,6 +82,13 @@ bot.onText(/\/las\/(.+)\/(.+)/, async function onLasText(msg, match) {
   if (welcomeText) {
     const extractedText = welcomeText[1].trim();
     bot.sendMessage(msg.chat.id, extractedText);
+    const day = today.getDate();
+    if (day === user.lemonHoneyDate) {
+      bot.sendMessage(
+        msg.chat.id,
+        "Also its your turn for the lemon honey tea today"
+      );
+    }
   } else {
     bot.sendMessage(
       msg.chat.id,
