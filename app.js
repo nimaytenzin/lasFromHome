@@ -27,7 +27,7 @@ const registeredUsers = [
   },
   {
     name: "Kinley Wangyel",
-    alias: "eden",
+    alias: "kwangyel",
     cid: "10503000532",
     password: "10503000532",
   },
