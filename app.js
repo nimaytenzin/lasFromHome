@@ -94,7 +94,7 @@ bot.onText(/\/las\/(.+)\/(.+)/, async function onLasText(msg, match) {
     if (day === user.lemonHoneyDate) {
       bot.sendMessage(
         msg.chat.id,
-        "Also its your turn for the lemon honey tea today"
+        "\n\nits your turn for the lemon honey tea today\n\n"
       );
     }
   } else {
