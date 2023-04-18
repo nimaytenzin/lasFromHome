@@ -34,6 +34,13 @@ const registeredUsers = [
     password: "10503000532",
     lemonHoneyDate: 19,
   },
+  {
+    name: "Sangay Wangdi",
+    alias: "sangay",
+    cid: "11705001357",
+    password: "arsenal2019",
+    lemonHoneyDate: 22,
+  },
 ];
 
 function findUserByAlias(alias) {
