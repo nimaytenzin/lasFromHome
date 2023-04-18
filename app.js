@@ -19,6 +19,18 @@ const registeredUsers = [
     cid: "10302000402",
     password: "10302000402",
   },
+  {
+    name: "Sonam Eden",
+    alias: "eden",
+    cid: "10807000525",
+    password: "10807000525",
+  },
+  {
+    name: "Kinley Wangyel",
+    alias: "eden",
+    cid: "10503000532",
+    password: "10503000532",
+  },
 ];
 
 function findUserByAlias(alias) {
