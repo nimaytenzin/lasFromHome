@@ -82,6 +82,7 @@ bot.onText(/\/las\/(.+)\/(.+)/, async function onLasText(msg, match) {
   if (welcomeText) {
     const extractedText = welcomeText[1].trim();
     bot.sendMessage(msg.chat.id, extractedText);
+    const today = new Date();
     const day = today.getDate();
     if (day === user.lemonHoneyDate) {
       bot.sendMessage(
