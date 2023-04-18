@@ -11,7 +11,6 @@ const TelegramBot = require("node-telegram-bot-api");
 const token = "5904987489:AAG1OOVNR-xPR8m7pEx57rOvvV8pkVNl0sY";
 const bot = new TelegramBot(token, { polling: true });
 const axios = require("axios");
-const cheerio = require("cheerio");
 
 bot.onText(/\/las\/(.+)\/(.+)\/(.+)/, async function onLasText(msg, match) {
   const cid = match[1];
