@@ -12,18 +12,42 @@ const token = "5904987489:AAG1OOVNR-xPR8m7pEx57rOvvV8pkVNl0sY";
 const bot = new TelegramBot(token, { polling: true });
 const axios = require("axios");
 
-bot.onText(/\/las\/(.+)\/(.+)\/(.+)/, async function onLasText(msg, match) {
-  const cid = match[1];
-  const password = match[2];
-  const hostId = match[3];
+const registeredUsers = [
+  {
+    name: "Nima Yoezer Tenzin",
+    alias: "tenzin",
+    cid: "10302000402",
+    password: "10302000402",
+  },
+];
+
+function findUserByAlias(alias) {
+  for (let i = 0; i < registeredUsers.length; i++) {
+    if (registeredUsers[i].alias === alias) {
+      return registeredUsers[i];
+    }
+  }
+  return null;
+}
+
+bot.onText(/\/las\/(.+)\/(.+)/, async function onLasText(msg, match) {
+  const alias = match[1];
+  const hostId = match[2];
+
+  const user = findUserByAlias(alias);
+  if (!user) {
+    bot.sendMessage(msg.chat.id, `No you cant boss! you are not registered`);
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append("cid", user.cid);
+  formData.append("password", user.password);
 
   bot.sendMessage(
     msg.chat.id,
-    `Logging in using the following credentials \ncid: ${cid},\npassword: ${password},\nhost:192.168.20.${hostId}`
+    `Logging in using the following credentials \ncid: ${user.cid},\npassword: ${user.password},\nhost:192.168.20.${hostId}`
   );
-  const formData = new FormData();
-  formData.append("cid", cid);
-  formData.append("password", password);
 
   const response = await axios.post(
     `http://192.168.20.83/las_final/index.php/ATD/login_validate`,
