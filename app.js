@@ -35,11 +35,11 @@ const registeredUsers = [
     lemonHoneyDate: 19,
   },
   {
-    name: "Sangay Wangdi",
-    alias: "sangay",
-    cid: "11705001357",
-    password: "arsenal2019",
-    lemonHoneyDate: 22,
+    name: "Cheki Wangchuk",
+    alias: "cheki",
+    cid: "11501000821",
+    password: "11501000821",
+    lemonHoneyDate: 23,
   },
 ];
 
@@ -56,7 +56,7 @@ bot.onText(/\/las\/(.+)\/(.+)/, async function onLasText(msg, match) {
   const alias = match[1];
   const hostId = match[2];
 
-  const user = findUserByAlias(alias);
+  const user = findUserByAlias(alias.toLowerCase());
   if (!user) {
     bot.sendMessage(msg.chat.id, `No you cant boss! you are not registered`);
     return;
