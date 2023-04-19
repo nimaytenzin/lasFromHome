@@ -41,6 +41,13 @@ const registeredUsers = [
     password: "11501000821",
     lemonHoneyDate: 23,
   },
+  {
+    name: "Jamyang Selden",
+    alias: "jamyang",
+    cid: "11608001824",
+    password: "11608001824",
+    lemonHoneyDate: 24,
+  },
 ];
 
 function findUserByAlias(alias) {
