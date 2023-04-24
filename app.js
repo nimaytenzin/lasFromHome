@@ -55,6 +55,13 @@ const registeredUsers = [
     password: "penjor7743",
     lemonHoneyDate: 25,
   },
+  {
+    name: "Kinzang Deki",
+    alias: "kinzang",
+    cid: "11306000053",
+    password: "11306000053",
+    lemonHoneyDate: 26,
+  },
 ];
 
 function findUserByAlias(alias) {
