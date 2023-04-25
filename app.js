@@ -62,6 +62,13 @@ const registeredUsers = [
     password: "11306000053",
     lemonHoneyDate: 26,
   },
+  {
+    name: "Babita",
+    alias: "babita",
+    cid: "11314000625",
+    password: "11314000625",
+    lemonHoneyDate: 27,
+  },
 ];
 
 function findUserByAlias(alias) {
@@ -115,7 +122,7 @@ bot.onText(/\/las\/(.+)\/(.+)/, async function onLasText(msg, match) {
     if (day === user.lemonHoneyDate) {
       bot.sendMessage(
         msg.chat.id,
-        "\n\nEnjoying the service? Treat me to a lemon honey tea today! haha\n\n"
+        "\n\nEnjoying the service? ek lemon honey tea to banta hai na? haha\n\n"
       );
     }
   } else {
