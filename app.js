@@ -88,7 +88,14 @@ const registeredUsers = [
     alias: "trilo",
     cid: "11202002787",
     password: "11202002787",
-    lemonHoneyDate: 1,
+    lemonHoneyDate: 2,
+  },
+  {
+    name: "Bishnu",
+    alias: "bishnu",
+    cid: "11410000704",
+    password: "3190",
+    lemonHoneyDate: 2,
   },
 ];
 
