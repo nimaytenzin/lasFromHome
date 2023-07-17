@@ -119,6 +119,13 @@ const registeredUsers = [
     password: "11411000381",
     lemonHoneyDate: 6,
   },
+  {
+    name: "kuenchap",
+    alias: "kuenchap",
+    cid: "10203004161",
+    password: "1",
+    lemonHoneyDate: 7,
+  },
 ];
 
 function findUserByAlias(alias) {
