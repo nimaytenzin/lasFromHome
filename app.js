@@ -140,6 +140,20 @@ const registeredUsers = [
     password: "11805001562",
     lemonHoneyDate: 9,
   },
+  {
+    name: "Phub Lham",
+    alias: "plham",
+    cid: "11311000186",
+    password: "11311000186",
+    lemonHoneyDate: 10,
+  },
+  {
+    name: "Sherab Lhamo",
+    alias: "sherab",
+    cid: "11411001987",
+    password: "11411001987",
+    lemonHoneyDate: 11,
+  },
 ];
 
 function findUserByAlias(alias) {
